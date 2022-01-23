@@ -10,7 +10,7 @@ import (
 
 var db *mcb.DB
 
-type myTable struct {
+type master struct {
 	Name       string   `json:"name"`
 	Age        int      `json:"age"`
 	Profession string   `json:"profession"`
@@ -35,11 +35,11 @@ func init() {
 func main() {
 
 	//How to insert into couchbase bucket
-	var myData myTable
+	var myData master
 
 	form := make(url.Values, 0)
-	form.Add("bucket", "bucketName") //bucket and collection-> namespace:bucket.scope.collection
-	form.Add("aid", "d006")          //document ID
+	form.Add("bucket", "royaltypool") //bucket and collection-> namespace:bucket.scope.collection
+	form.Add("aid", "d006")           //document ID
 	form.Add("name", "Mostain Billah")
 	form.Add("age", "36")
 	form.Add("profession", "Developer")
