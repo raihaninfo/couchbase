@@ -38,7 +38,7 @@ INSERT INTO royaltypool.raihan.client (KEY, VALUE) VALUES('airline_4485',
 ## Insert Multiple Data
 
 ```sql
-  INSERT INTO `royaltypool`.raihan.client (KEY,VALUE)
+INSERT INTO `royaltypool`.raihan.client (KEY,VALUE)
 VALUES ( "airline_4444",
     { "callsign": "MY-AIR",
       "country": "United States",
