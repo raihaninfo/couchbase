@@ -1,5 +1,6 @@
 # couchbase
-`Couchbase` is  distributed NoSQL cloud database.
+
+`Couchbase` is distributed NoSQL cloud database.
 
 <hr>
 
@@ -34,6 +35,29 @@ INSERT INTO royaltypool.raihan.client (KEY, VALUE) VALUES('airline_4485',
 	   "type": "airline"} )
 ```
 
+## Insert Multiple Data
+
+```sql
+  INSERT INTO `royaltypool`.raihan.client (KEY,VALUE)
+VALUES ( "airline_4444",
+    { "callsign": "MY-AIR",
+      "country": "United States",
+      "iata": "Z1",
+      "icao": "AQZ",
+      "name": "80-My Air",
+      "id": "4444",
+      "type": "airline"} ),
+VALUES ( "airline_4445",
+    { "callsign": "AIR-X",
+      "country": "United States",
+      "iata": "X1",
+      "icao": "ARX",
+      "name": "10-AirX",
+      "id": "4445",
+      "type": "airline"} )
+RETURNING *;
+```
+
 ## Read data
 
 ```sql
@@ -47,6 +71,7 @@ UPDATE royaltypool.raihan.client SET country = "Bangladesh" WHERE id = "4444"
 ```
 
 ## Delete data
+
 ```sql
 DELETE FROM royaltypool.raihan.client WHERE id='4444'
 ```
